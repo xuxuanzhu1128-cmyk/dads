@@ -1,0 +1,8 @@
+ML-100K 数据集调优:
+
+python tune.py --algo_name svdpp --dataset ml-100k --gpu "" --hyperopt_trail 20 --optimization_metric ndcg --tune_pack '{"factors": {"min": 32, "max": 128, "step": 16}, "lr": {"min": 0.001, "max": 0.01, "step": null}, "reg_1": {"min": 0.0001, "max": 0.01, "step": null}, "reg_2": {"min": 0.0001, "max": 0.01, "step": null}, "reg_y": {"min": 0.0001, "max": 0.01, "step": null}}' --epochs 20
+
+
+ML-1M 数据集调优:
+
+python tune.py --algo_name svdpp --dataset ml-1m --gpu "" --hyperopt_trail 20 --optimization_metric ndcg --tune_pack '{"factors": {"min": 32, "max": 128, "step": 16}, "lr": {"min": 0.001, "max": 0.01, "step": null}, "reg_1": {"min": 0.0001, "max": 0.01, "step": null}, "reg_2": {"min": 0.0001, "max": 0.01, "step": null}, "reg_y": {"min": 0.0001, "max": 0.01, "step": null}}' --epochs 20
